@@ -23,8 +23,9 @@ public class GestionTaches {
      */
     public boolean ajouterTache(String title,String description){
         if(
-            this.tasks.containsKey(title) ||
-            title == null || description == null
+            title == null ||
+            description == null ||
+            this.tasks.containsKey(title)
         ) return false;
 
         this.tasks.put(title, new TaskConfig(description));
