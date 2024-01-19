@@ -145,5 +145,10 @@ public class TaskManager {
         public int getDurationInSeconds(){
             return this.durationInSeconds;
         }
+
+        @Override
+        public String toString(){
+            return this.title + " - " + this.description + " " + this.durationInSeconds;
+        }
     }
 }
